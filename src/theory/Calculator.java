@@ -22,12 +22,26 @@ public class Calculator {
             System.out.println("Lỗi: Không thể chia cho 0.");
         }
     }
-    public void PassByValue(int a) {
-        a = a +10;
-        System.out.println(a);
 
+    public void passByValue(int a) {
+        a = a + 10;
+        System.out.println(a);
     }
 
+    // New method to calculate area of a circle
+    public float calculateCircleArea(float radius) {
+        Circle circle = new Circle();
+        return circle.getPI() * radius * radius;
+    }
+
+    // Phương thức sửa lỗi addnum
+    public void addnum(int... num) {
+        int total = 0;
+        for (int n : num) {
+            total += n;
+        }
+        System.out.println("Tổng các số: " + total); // Hiển thị kết quả tổng
+    }
 
     public static void main(String[] args) {
         Calculator calc = new Calculator();
@@ -46,10 +60,19 @@ public class Calculator {
         // Test divide
         calc.divide(10, 5);
         calc.divide(10, 0); // Kiểm tra chia cho 0
+
+        // Test calculateCircleArea
+        float radius = 5.0f;
+        float area = calc.calculateCircleArea(radius);
+        System.out.println("Diện tích hình tròn với bán kính " + radius + " là: " + area);
+
+        // Test addnum
+        calc.addnum(10, 5, 15); // Thêm nhiều số và hiển thị kết quả
     }
 }
-class Cirle{
-    public float getPI(){
+
+class Circle {
+    public float getPI() {
         return 3.14f;
     }
 }
