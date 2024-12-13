@@ -43,6 +43,15 @@ public class SinhVien {
     public void setMark(float mark) {
         this.mark = mark;
     }
+    @Override
+    public String toString() {
+        return "SinhVien{" +
+                "rollNo=" + rollNo +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", mark=" + mark +
+                '}';
+    }
 
 
 
