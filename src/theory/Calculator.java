@@ -48,3 +48,8 @@ public class Calculator {
         calc.divide(10, 0); // Kiểm tra chia cho 0
     }
 }
+class Cirle{
+    public float getPI(){
+        return 3.14f;
+    }
+}
